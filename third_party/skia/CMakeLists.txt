@@ -139,6 +139,10 @@ file(GLOB SKIA_SRC
 	src/ports/SkThread_win.cpp
 	src/utils/SkMatrix44.cpp
 	)
+source_group("Source Files\\effects" REGULAR_EXPRESSION "src/effects/.*\\.cpp")
+source_group("Source Files\\opts" REGULAR_EXPRESSION "src/opts/.*\\.cpp")
+source_group("Source Files\\ports" REGULAR_EXPRESSION "src/ports/.*\\.cpp")
+source_group("Source Files\\utils" REGULAR_EXPRESSION "src/utils/.*\\.cpp")
 
 add_library(${PROJECT_NAME} ${SKIA_SRC})
 
