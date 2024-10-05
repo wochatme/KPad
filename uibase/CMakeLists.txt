@@ -1,5 +1,7 @@
 project(libuibase)
 
+add_definitions(-D_UNICODE -DUNICODE -DNOMINMAX)
+
 file(GLOB LIBUIBASE_SRC 
 	theme_provider.cpp
 	view_prop.cpp

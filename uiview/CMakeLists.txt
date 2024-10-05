@@ -1,5 +1,7 @@
 project(libuiview)
 
+add_definitions(-D_UNICODE -DUNICODE -DNOMINMAX)
+
 file(GLOB LIBUIVIEW_SRC 
 	accelerator.cpp
 	background.cpp

@@ -1,5 +1,7 @@
 project(libskia)
 
+add_definitions(-D_UNICODE -DUNICODE -DNOMINMAX)
+
 file(GLOB LIBSKIA_SRC 
 	ext/SkMemory_new_handler.cpp
 	ext/bitmap_platform_device_win.cpp

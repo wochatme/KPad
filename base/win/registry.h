@@ -1,5 +1,16 @@
-#ifndef __base_registry_h__
-#define __base_registry_h__
+// Copyright 2012 The Chromium Authors
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+#ifndef BASE_WIN_REGISTRY_H_
+#define BASE_WIN_REGISTRY_H_
+
+#include <stdint.h>
+
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 
 #include <windows.h>
 #include <string>
@@ -10,6 +21,16 @@ namespace base
 {
     namespace win
     {
+        // Utility class to read, write and manipulate the Windows Registry.
+        // Registry vocabulary primer: a "key" is like a folder, in which there
+        // are "values", which are <name, data> pairs, with an associated data type.
+        //
+        // Note:
+        //  * ReadValue family of functions guarantee that the out-parameter
+        //    is not touched in case of failure.
+        //  * Functions returning LONG indicate success as ERROR_SUCCESS or an
+        //    error as a (non-zero) win32 error code.
+
         class RegKey
         {
         public:
@@ -135,4 +156,4 @@ namespace base
     } //namespace win
 } //namespace base
 
-#endif //__base_registry_h__
+#endif  // BASE_WIN_REGISTRY_H_

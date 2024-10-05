@@ -1,5 +1,7 @@
 project(libuigfx)
 
+add_definitions(-D_UNICODE -DUNICODE -DNOMINMAX)
+
 file(GLOB LIBUIGFX_SRC 
 	blit.cpp
 	canvas.cpp
