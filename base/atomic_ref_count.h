@@ -1,9 +1,10 @@
 #ifndef __base_atomic_ref_count_h__
 #define __base_atomic_ref_count_h__
 
+#include "atomicops.h"
+
 namespace base
 {
-
     typedef subtle::Atomic32 AtomicRefCount;
 
     inline void AtomicRefCountIncN(volatile AtomicRefCount* ptr,

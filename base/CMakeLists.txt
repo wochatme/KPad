@@ -82,6 +82,8 @@ file(GLOB LIBASE_SRC
 	win/wrapped_window_proc.cpp
 	)
 
+source_group("Source Files\\debug" FILES debug/debugger.cpp debug/stack_trace.cpp)
+
 add_library(${PROJECT_NAME} ${LIBASE_SRC})
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
