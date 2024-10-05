@@ -71,7 +71,7 @@ namespace base
     LogMessageHandlerFunction GetLogMessageHandler();
 
     typedef int LogSeverity;
-    const LogSeverity LOG_VERBOSE = -1;
+    const LogSeverity LOG_VERBOSE = -1; 
     const LogSeverity LOG_INFO = 0;
     const LogSeverity LOG_WARNING = 1;
     const LogSeverity LOG_ERROR = 2;
@@ -210,7 +210,6 @@ namespace base
 #define DPLOG_IF(severity, condition)       DLOG_EAT_STREAM_PARAMETERS
 #define DVLOG_IF(verboselevel, condition)   DLOG_EAT_STREAM_PARAMETERS
 #endif //ENABLE_DLOG
-
         enum { DEBUG_MODE = ENABLE_DLOG };
 
 #undef ENABLE_DLOG
@@ -333,6 +332,7 @@ namespace base
     class LogMessageVoidify
     {
     public:
+        LogMessageVoidify() {}
         void operator&(std::ostream&) {}
     };
 
@@ -413,6 +413,5 @@ namespace base
     class StringPiece;
 }
 extern std::ostream& operator<<(std::ostream& o, const base::StringPiece& piece);
-
 
 #endif //__base_logging_h__
