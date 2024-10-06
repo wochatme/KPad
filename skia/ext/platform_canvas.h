@@ -1,7 +1,7 @@
 #ifndef __skia_platform_canvas_h__
 #define __skia_platform_canvas_h__
 
-#include "SkCanvas.h"
+#include "third_party/skia/include/core/SkCanvas.h"
 
 #include "platform_device_win.h"
 

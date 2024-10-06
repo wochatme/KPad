@@ -65,7 +65,7 @@
     #if !defined(SK_RESTRICT)
         #define SK_RESTRICT __restrict
     #endif
-    #include "sk_stdint.h"
+    #include "../config/sk_stdint.h"
 #endif
 
 //////////////////////////////////////////////////////////////////////

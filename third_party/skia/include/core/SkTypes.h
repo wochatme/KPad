@@ -18,7 +18,7 @@
 #define SkTypes_DEFINED
 
 #include "SkPreConfig.h"
-#include "SkUserConfig.h"
+#include "../config/SkUserConfig.h"
 #include "SkPostConfig.h"
 
 #ifndef SK_IGNORE_STDINT_DOT_H

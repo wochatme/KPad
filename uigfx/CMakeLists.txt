@@ -36,5 +36,10 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded
 target_include_directories(${PROJECT_NAME} 
     PUBLIC ${PROJECT_SOURCE_DIR} 
            ${CMAKE_SOURCE_DIR}
+           ${CMAKE_SOURCE_DIR}/third_party/skia/include/config
+           ${CMAKE_SOURCE_DIR}/third_party/skia/include/core
+           ${CMAKE_SOURCE_DIR}/third_party/skia/include/effects
+           ${CMAKE_SOURCE_DIR}/third_party/skia/include/ports
+           ${CMAKE_SOURCE_DIR}/third_party/skia/include/utils
            )
            
