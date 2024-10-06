@@ -1,4 +1,3 @@
-#if 0
 #include "file_version_info.h"
 
 #include "file_path.h"
@@ -219,4 +218,3 @@ std::wstring FileVersionInfo::GetStringValue(const wchar_t* name)
         return L"";
     }
 }
-#endif 

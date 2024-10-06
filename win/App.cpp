@@ -10,6 +10,8 @@
 #include <atlscrl.h>
 
 #include "resource.h"
+#include "App.h"
+#include "Chromium.h"
 
 #include "View.h"
 #include "WinDlg.h"
@@ -46,6 +48,7 @@ static int AppTerm(HINSTANCE hInstance = NULL)
 	return 0;
 }
 
+
 int WINAPI _tWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPTSTR lpstrCmdLine, _In_ int nCmdShow)
 {
 	int nRet;
@@ -61,6 +64,7 @@ int WINAPI _tWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	nRet = AppInit(hInstance);
 	if (nRet == 0)
 	{
+		ChromeTest(lpstrCmdLine, nCmdShow);
 		AppRun(lpstrCmdLine, nCmdShow);
 	}
 

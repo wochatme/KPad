@@ -1,4 +1,3 @@
-#if 0
 #include "stack_trace.h"
 
 #include <windows.h>
@@ -201,4 +200,4 @@ namespace base
 
     } //namespace debug
 } //namespace base
-#endif 
+

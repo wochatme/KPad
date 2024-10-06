@@ -7,6 +7,7 @@ add_executable(${PROJECT_NAME} WIN32
 	App.cpp
 	pch.cpp
 	App.rc
+	Chromium.cpp
 	chrome/accessible_pane_view.cpp
 	chrome/base_tab.cpp
 	chrome/base_tab_strip.cpp
@@ -92,5 +93,11 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 	)
 
 target_link_libraries(${PROJECT_NAME} libase)
+target_link_libraries(${PROJECT_NAME} libuibase)
+target_link_libraries(${PROJECT_NAME} libuigfx)
+target_link_libraries(${PROJECT_NAME} libuiview)
 target_link_libraries(${PROJECT_NAME} libskia)
+target_link_libraries(${PROJECT_NAME} skia)
+
+
 

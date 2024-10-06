@@ -1,4 +1,3 @@
-#if 0
 #include "base_process.h"
 
 #include "logging.h"
@@ -111,4 +110,3 @@ namespace base
     }
 
 } //namespace base
-#endif 

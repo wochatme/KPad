@@ -1,8 +1,9 @@
 #ifndef __base_platform_file_h__
 #define __base_platform_file_h__
 
+#include "basic_types.h"
 #include "file_path.h"
-#include "time.h"
+#include "base_time.h"
 
 namespace base
 {

@@ -154,7 +154,7 @@ public:
     // Returns true if |character| is in kSeparators.
     static bool IsSeparator(CharType character);
 
-    bool FilePath::EndsWithSeparator() const {
+    bool EndsWithSeparator() const {
         if (empty())
             return false;
         return IsSeparator(path_[path_.size() - 1]);

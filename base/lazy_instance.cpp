@@ -1,4 +1,3 @@
-#if 0
 #include "lazy_instance.h"
 
 #include "at_exit.h"
@@ -51,4 +50,3 @@ namespace base
 
 } //namespace base
 
-#endif 

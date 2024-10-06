@@ -1,4 +1,3 @@
-#if 0
 #include "file_path.h"
 
 #include <windows.h>
@@ -680,4 +679,3 @@ FilePath FilePath::NormalizeWindowsPathSeparators() const
     }
     return FilePath(copy);
 }
-#endif 

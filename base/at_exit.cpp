@@ -1,5 +1,8 @@
-#if 0
 #include "at_exit.h"
+
+#include <stddef.h>
+#include <ostream>
+#include <utility>
 
 #include "bind.h"
 #include "logging.h"
@@ -7,6 +10,12 @@
 
 namespace base
 {
+    // Keep a stack of registered AtExitManagers.  We always operate on the most
+    // recent, and we should never have more than one outside of testing (for a
+    // statically linked version of this library).  Testing may use the shadow
+    // version of the constructor, and if we are building a dynamic library we may
+    // end up with multiple AtExitManagers on the same process.  We don't protect
+    // this for thread-safe access, since it will only be modified in testing.
     static AtExitManager* g_top_manager = NULL;
 
     AtExitManager::AtExitManager()
@@ -66,4 +75,5 @@ namespace base
     }
 
 } //namespace base
-#endif 
+
+

@@ -42,7 +42,7 @@
 
 #include "base/atomicops.h"
 #include "base/logging.h"
-#include "base/time.h"
+#include "base/base_time.h"
 
 class Pickle;
 

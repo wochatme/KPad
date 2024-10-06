@@ -12,7 +12,7 @@ file(GLOB LIBASE_SRC
 	environment.cpp
 	file_path.cpp
 	file_util.cpp
-	file_util_win.cpp
+#	file_util_win.cpp
 	file_version_info.cpp
 	icu_utf.cpp
 	lazy_instance.cpp
@@ -53,6 +53,7 @@ file(GLOB LIBASE_SRC
 	debug/stack_trace.cpp
 	i18n/case_conversion.cpp
 	i18n/rtl.cpp
+	icu/icu_utf.cpp
 	memory/ref_counted.cpp
 	memory/ref_counted_memory.cpp
 	memory/weak_ptr.cpp
@@ -86,6 +87,7 @@ file(GLOB LIBASE_SRC
 
 source_group("Source Files\\debug" REGULAR_EXPRESSION "debug/.*\\.cpp")
 source_group("Source Files\\i18n" REGULAR_EXPRESSION "i18n/.*\\.cpp")
+source_group("Source Files\\icu" REGULAR_EXPRESSION "icu/.*\\.cpp")
 source_group("Source Files\\memory" REGULAR_EXPRESSION "memory/.*\\.cpp")
 source_group("Source Files\\metric" REGULAR_EXPRESSION "metric/.*\\.cpp")
 source_group("Source Files\\synchronization" REGULAR_EXPRESSION "synchronization/.*\\.cpp")

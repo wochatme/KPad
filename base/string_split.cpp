@@ -1,10 +1,25 @@
-#if 0
 #include "string_split.h"
 
-#include "third_party/icu_base/icu_utf.h"
+//#include "third_party/icu_base/icu_utf.h"
 
 #include "logging.h"
 #include "string_util.h"
+
+/**
+ * Is this code point a surrogate (U+d800..U+dfff)?
+ * @param c 32-bit code point
+ * @return TRUE or FALSE
+ * @stable ICU 2.4
+ */
+
+#define CBU_IS_SURROGATE(c) (((c)&0xfffff800)==0xd800)
+/**
+ * Does this code unit alone encode a code point (BMP, not a surrogate)?
+ * @param c 16-bit code unit
+ * @return TRUE or FALSE
+ * @stable ICU 2.4
+ */
+#define CBU16_IS_SINGLE(c) !CBU_IS_SURROGATE(c)
 
 namespace base
 {
@@ -168,4 +183,3 @@ namespace base
 
 } //namespace base
 
-#endif 

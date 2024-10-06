@@ -1,1 +1,2 @@
-// XEdit.h
+#pragma once
+

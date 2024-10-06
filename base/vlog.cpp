@@ -1,4 +1,3 @@
-#if 0
 #include "vlog.h"
 
 #include "logging.h"
@@ -42,7 +41,7 @@ namespace base
     VlogInfo::VlogInfo(const std::string& v_switch,
         const std::string& vmodule_switch,
         int* min_log_level)
-        : min_log_level_(kDefaultVlogLevel)
+        : min_log_level_(min_log_level)
     {
         DCHECK(min_log_level != NULL);
 
@@ -192,4 +191,3 @@ namespace base
     }
 
 } //namespace base
-#endif 

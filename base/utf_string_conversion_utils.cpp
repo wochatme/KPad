@@ -1,7 +1,6 @@
-#if 0
 #include "utf_string_conversion_utils.h"
 
-#include "third_party/icu_base/icu_utf.h"
+#include "icu/icu_utf.h"
 
 namespace base
 {
@@ -121,5 +120,4 @@ namespace base
 
 } //namespace base
 
-#endif 
 

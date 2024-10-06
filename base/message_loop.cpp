@@ -1,4 +1,3 @@
-#if 0
 #include "message_loop.h"
 
 #include "bind.h"
@@ -757,5 +756,3 @@ bool MessageLoopForIO::WaitForIOCompletion(DWORD timeout, IOHandler* filter)
 {
     return pump_io()->WaitForIOCompletion(timeout, filter);
 }
-
-#endif 

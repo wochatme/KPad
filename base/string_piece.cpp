@@ -1,6 +1,6 @@
-#if 0
 #include "string_piece.h"
 
+#include <iostream>
 #include <algorithm>
 
 std::ostream& operator<<(std::ostream& o, const base::StringPiece& piece)
@@ -282,4 +282,4 @@ namespace base
     const StringPiece::size_type StringPiece::npos = size_type(-1);
 
 } //namespace base
-#endif 
+

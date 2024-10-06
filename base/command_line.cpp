@@ -1,4 +1,3 @@
-#if 0
 #include "command_line.h"
 
 #include <windows.h>
@@ -405,5 +404,3 @@ void CommandLine::ParseFromString(const std::wstring& command_line)
     InitFromArgv(num_args, args);
     LocalFree(args);
 }
-
-#endif 

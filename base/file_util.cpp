@@ -1,4 +1,3 @@
-#if 0
 #include "file_util.h"
 
 #include <limits>
@@ -1007,6 +1006,4 @@ namespace base
     }
 
 } //namespace base
-
-#endif
 

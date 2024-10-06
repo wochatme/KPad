@@ -1,4 +1,4 @@
-#if 0
+#if 10
 // Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
@@ -88,7 +88,7 @@ namespace base {
 
         if (path.value().length() >= MAX_PATH)
             return false;
-
+#if 0
         if (!recursive) {
             // If not recursing, then first check to see if |path| is a directory.
             // If it is, then remove it with RemoveDirectory.
@@ -129,6 +129,8 @@ namespace base {
         // an empty directory and some return 0x402 when they should be returning
         // ERROR_FILE_NOT_FOUND. MSDN says Vista and up won't return 0x402.
         return (err == 0 || err == ERROR_FILE_NOT_FOUND || err == 0x402);
+#endif 
+        return true;
     }
 
     bool DeleteFileAfterReboot(const FilePath& path) {
@@ -158,8 +160,10 @@ namespace base {
             REPLACEFILE_IGNORE_MERGE_ERRORS, NULL, NULL)) {
             return true;
         }
+#if 10
         if (error)
             *error = LastErrorToPlatformFileError(GetLastError());
+#endif 
         return false;
     }
 

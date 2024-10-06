@@ -5,6 +5,7 @@
 #include <windows.h>
 
 #include "basic_types.h"
+#include "logging.h"
 
 namespace base
 {

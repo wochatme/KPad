@@ -1,4 +1,3 @@
-#if 0
 #include "callback_internal.h"
 
 namespace base
@@ -37,4 +36,3 @@ namespace base
 
     } //namespace internal
 } //namespace base
-#endif 

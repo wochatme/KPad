@@ -6,7 +6,7 @@
 
 #include "message_pump.h"
 #include "observer_list.h"
-#include "time.h"
+#include "base_time.h"
 #include "win/scoped_handle.h"
 
 namespace base

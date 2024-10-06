@@ -1,4 +1,3 @@
-#if 0
 #include "base_paths.h"
 
 #include <windows.h>
@@ -187,5 +186,3 @@ namespace base
     }
 
 } //namespace base
-
-#endif 

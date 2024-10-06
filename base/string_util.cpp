@@ -1,9 +1,10 @@
-#if 0
+#if 10
 #include "string_util.h"
 
+#include <iostream>
 #include <algorithm>
 
-#include "third_party/icu_base/icu_utf.h"
+#include "icu/icu_utf.h"
 
 #include "memory/singleton.h"
 #include "utf_string_conversions.h"
@@ -859,7 +860,7 @@ OutStringType DoReplaceStringPlaceholders(const FormatStringType& format_string,
             if (i + 1 != format_string.end())
             {
                 ++i;
-                DCHECK('$' == *i || '1' <= *i) << "Invalid placeholder: " << *i;
+                //DCHECK('$' == *i || '1' <= *i) << "Invalid placeholder: " << *i;
                 if ('$' == *i)
                 {
                     while (i != format_string.end() && '$' == *i)
@@ -936,7 +937,7 @@ string16 ReplaceStringPlaceholders(const string16& format_string,
     return result;
 }
 
-static bool IsWildcard(base_icu::UChar32 character)
+static bool IsWildcard(base::UChar32 character)
 {
     return character == '*' || character == '?';
 }
@@ -963,9 +964,9 @@ static void EatSameChars(const CHAR** pattern, const CHAR* pattern_end,
 
         const CHAR* pattern_next = *pattern;
         const CHAR* string_next = *string;
-        base_icu::UChar32 pattern_char = next(&pattern_next, pattern_end);
+        base::UChar32 pattern_char = next(&pattern_next, pattern_end);
         if (pattern_char == next(&string_next, string_end) &&
-            pattern_char != (base_icu::UChar32)CBU_SENTINEL)
+            pattern_char != (base::UChar32)CBU_SENTINEL)
         {
             *pattern = pattern_next;
             *string = string_next;
@@ -1068,9 +1069,9 @@ static bool MatchPatternT(const CHAR* eval, const CHAR* eval_end,
 
 struct NextCharUTF8
 {
-    base_icu::UChar32 operator()(const char** p, const char* end)
+    base::UChar32 operator()(const char** p, const char* end)
     {
-        base_icu::UChar32 c;
+        base::UChar32 c;
         int offset = 0;
         CBU8_NEXT(*p, offset, end - *p, c);
         *p += offset;
@@ -1080,9 +1081,9 @@ struct NextCharUTF8
 
 struct NextCharUTF16
 {
-    base_icu::UChar32 operator()(const char16** p, const char16* end)
+    base::UChar32 operator()(const char16** p, const char16* end)
     {
-        base_icu::UChar32 c;
+        base::UChar32 c;
         int offset = 0;
         CBU16_NEXT(*p, offset, end - *p, c);
         *p += offset;

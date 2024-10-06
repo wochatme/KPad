@@ -1,7 +1,6 @@
-#if 0
 #include "base_time.h"
 
-#include "third_party/nspr/prtime.h"
+//#include "third_party/nspr/prtime.h"
 
 #include "cpu.h"
 #include "memory/singleton.h"
@@ -123,6 +122,7 @@ namespace base
     // static
     bool Time::FromString(const char* time_string, Time* parsed_time)
     {
+#if 0
         DCHECK((time_string != NULL) && (parsed_time != NULL));
 
         if (time_string[0] == '\0')
@@ -140,6 +140,7 @@ namespace base
 
         result_time += kTimeTToMicrosecondsOffset;
         *parsed_time = Time(result_time);
+#endif 
         return true;
     }
 
@@ -539,4 +540,4 @@ bool TimeTicks::IsHighResClockWorking()
 {
     return HighResNowSingleton::GetInstance()->IsUsingHighResClock();
 }
-#endif 
+
