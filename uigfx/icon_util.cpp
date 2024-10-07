@@ -1,4 +1,3 @@
-#if 0
 #include "icon_util.h"
 #include "base/file_util.h"
 #include "base/file_path.h"
@@ -493,4 +492,3 @@ void IconUtil::ComputeBitmapSizeComponents(const SkBitmap& bitmap,
     size_t masks_size = *xor_mask_size + and_mask_size;
     *bytes_in_resource = masks_size + sizeof(BITMAPINFOHEADER);
 }
-#endif 

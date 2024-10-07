@@ -6,11 +6,12 @@
 #include "metric/histogram.h"
 #include "win/wrapped_window_proc.h"
 
-
+#if 0
 HANDLE* handle_get_events(int* nevents);
 void handle_got_event(HANDLE event);
 void safefree(void*);
 #define sfree safefree
+#endif 
 namespace base
 {
 
@@ -230,6 +231,7 @@ namespace base
 
     void MessagePumpForUI::WaitForWork()
     {
+#if 0
         int delay = GetCurrentDelay();
         if (delay < 0) 
         {
@@ -269,6 +271,7 @@ namespace base
         }
 
         DCHECK_NE(WAIT_FAILED, result) << GetLastError();
+#endif 
     }
 
     void MessagePumpForUI::HandleWorkMessage()

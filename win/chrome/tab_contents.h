@@ -65,9 +65,9 @@ public:
     //{
     //    return view_.get();
     //}
-
+#if 0
     view::View* puttyView() const;
-
+#endif 
     // Tab navigation state ------------------------------------------------------
 
     // Returns the current navigation properties, which if a navigation is
