@@ -1,4 +1,3 @@
-#if 0
 #include "stats_counters.h"
 
 namespace base
@@ -142,4 +141,4 @@ namespace base
     }
 
 } //namespace base
-#endif 
+

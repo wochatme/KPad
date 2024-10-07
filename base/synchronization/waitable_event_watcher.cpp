@@ -1,4 +1,4 @@
-#if 0
+
 #include "waitable_event_watcher.h"
 
 #include "waitable_event.h"
@@ -54,4 +54,3 @@ namespace base
 
 } //namespace base
 
-#endif 

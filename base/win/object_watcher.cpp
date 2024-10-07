@@ -1,4 +1,3 @@
-#if 0
 #include "object_watcher.h"
 
 namespace base
@@ -151,4 +150,4 @@ namespace base
 
     } //namespace win
 } //namespace base
-#endif 
+

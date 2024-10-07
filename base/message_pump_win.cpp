@@ -1,4 +1,3 @@
-#if 0
 #include "message_pump_win.h"
 
 #include <math.h>
@@ -596,4 +595,3 @@ namespace base
 
 } //namespace base
 
-#endif 

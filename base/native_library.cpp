@@ -1,4 +1,3 @@
-#if 0
 #include "native_library.h"
 
 #include "file_path.h"
@@ -69,5 +68,4 @@ namespace base
 
 } //namespace base
 
-#endif 
 

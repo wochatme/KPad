@@ -1,4 +1,3 @@
-#if 0
 #include "thread.h"
 
 #include "base/lazy_instance.h"
@@ -176,4 +175,4 @@ namespace base
     }
 
 } //namespace base
-#endif 
+

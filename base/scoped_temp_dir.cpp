@@ -1,4 +1,3 @@
-#if 0
 #include "scoped_temp_dir.h"
 
 #include "file_util.h"
@@ -102,4 +101,3 @@ bool ScopedTempDir::IsValid() const
 {
     return !path_.empty() && base::DirectoryExists(path_);
 }
-#endif 

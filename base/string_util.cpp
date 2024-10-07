@@ -1,4 +1,4 @@
-#if 10
+
 #include "string_util.h"
 
 #include <iostream>
@@ -1143,4 +1143,3 @@ size_t base::wcslcpy(wchar_t* dst, const wchar_t* src, size_t dst_size)
 {
     return lcpyT<wchar_t>(dst, src, dst_size);
 }
-#endif 

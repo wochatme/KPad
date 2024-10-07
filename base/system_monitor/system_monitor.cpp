@@ -1,4 +1,4 @@
-#if 0
+
 #include "system_monitor.h"
 
 #include "base/logging.h"
@@ -152,4 +152,4 @@ namespace base
     }
 
 } //namespace base
-#endif 
+

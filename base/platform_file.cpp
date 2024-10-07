@@ -1,4 +1,3 @@
-#if 0
 #include "platform_file.h"
 
 #include "logging.h"
@@ -289,4 +288,3 @@ namespace base
 
 } //namespace base
 
-#endif 

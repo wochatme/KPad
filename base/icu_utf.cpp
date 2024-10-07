@@ -1,4 +1,3 @@
-#if 0
 /*
 ******************************************************************************
 *
@@ -18,9 +17,9 @@
 *   that would otherwise be too long as macros.
 */
 
-#include "base/third_party/icu/icu_utf.h"
+#include "icu/icu_utf.h"
 
-namespace base_icu {
+namespace base {
 
     /**
      * UTF8_ERROR_VALUE_1 and UTF8_ERROR_VALUE_2 are special error values for UTF-8,
@@ -232,5 +231,4 @@ namespace base_icu {
         return c;
     }
 
-}  // namespace base_icu
-#endif 
+}  // namespace base

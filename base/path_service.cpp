@@ -1,4 +1,3 @@
-#if 0
 #include "path_service.h"
 
 #include <windows.h>
@@ -261,4 +260,3 @@ void PathService::RegisterProvider(ProviderFunc func, int key_start,
     path_data->providers = p;
 }
 
-#endif 

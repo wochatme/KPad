@@ -1,4 +1,4 @@
-#if 0
+
 #include "sys_info.h"
 
 #include <windows.h>
@@ -119,4 +119,4 @@ namespace base
     }
 
 } //namespace base
-#endif 
+

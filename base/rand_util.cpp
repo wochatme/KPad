@@ -4,7 +4,7 @@
 #include <limits>
 #include <stdlib.h>
 
-#include "algorithm/base64/base64.h"
+//#include "algorithm/base64/base64.h"
 #include "logging.h"
 #include "string_util.h"
 

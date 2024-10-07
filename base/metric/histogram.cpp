@@ -1,4 +1,3 @@
-#if 0
 #include "histogram.h"
 
 #include <math.h>
@@ -1326,4 +1325,4 @@ namespace base
     bool StatisticsRecorder::dump_on_exit_ = false;
 
 } //namespace base
-#endif 
+

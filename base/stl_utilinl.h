@@ -4,6 +4,7 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <functional>
 
 template<class T>
 void STLClearObject(T* obj)

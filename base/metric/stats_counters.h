@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "base/time.h"
+#include "base/base_time.h"
 #include "stats_table.h"
 
 namespace base

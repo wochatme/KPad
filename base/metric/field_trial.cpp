@@ -1,7 +1,6 @@
-#if 0
 #include "field_trial.h"
 
-#include "base/algorithm/sha1/sha1.h"
+//#include "base/algorithm/sha1/sha1.h"
 #include "base/logging.h"
 #include "base/rand_util.h"
 #include "base/string_util.h"
@@ -185,6 +184,7 @@ namespace base
     double FieldTrial::HashClientId(const std::string& client_id,
         const std::string& trial_name)
     {
+#if 0
         // SHA-1 is designed to produce a uniformly random spread in its output space,
         // even for nearly-identical inputs, so it helps massage whatever client_id
         // and trial_name we get into something with a uniform distribution, which
@@ -198,6 +198,8 @@ namespace base
         uint64* bits = reinterpret_cast<uint64*>(&sha1_hash[0]);
 
         return BitsToOpenEndedUnitInterval(*bits);
+#endif 
+        return 0.f;
     }
 
     //------------------------------------------------------------------------------
@@ -468,4 +470,4 @@ namespace base
     }
 
 } //namespace base
-#endif 
+
