@@ -1,7 +1,7 @@
 #ifndef __ui_base_animation_container_element_h__
 #define __ui_base_animation_container_element_h__
 
-#include "base/time.h"
+#include "base/base_time.h"
 
 namespace ui
 {

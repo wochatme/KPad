@@ -1,7 +1,7 @@
 #ifndef __abstract_tab_strip_view_h__
 #define __abstract_tab_strip_view_h__
 
-#include "view/view.h"
+#include "uiview/view.h"
 
 // This interface is the way the browser view sees a tab strip's view.
 class AbstractTabStripView : public view::View

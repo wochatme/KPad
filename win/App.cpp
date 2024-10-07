@@ -51,10 +51,17 @@ static int AppTerm(HINSTANCE hInstance = NULL)
 
 int WINAPI _tWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _In_ LPTSTR lpstrCmdLine, _In_ int nCmdShow)
 {
-	int nRet;
+	int nRet = 0;
+
+	USES_CONVERSION;
+	UNREFERENCED_PARAMETER(hPrevInstance);
 
 	HRESULT hRes = ::CoInitialize(NULL);
 	ATLASSERT(SUCCEEDED(hRes));
+
+	// this resolves ATL window thunking problem when Microsoft Layer
+	// for Unicode (MSLU) is used.
+	::DefWindowProc(NULL, 0, 0, 0L);
 
 	AtlInitCommonControls(ICC_COOL_CLASSES | ICC_BAR_CLASSES);	// add flags to support other controls
 

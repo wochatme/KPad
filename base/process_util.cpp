@@ -1,4 +1,4 @@
-#if 0
+
 #include "process_util.h"
 
 #include <fcntl.h>
@@ -268,7 +268,7 @@ namespace base
         startup_info.cb = sizeof(startup_info);
         if (options.empty_desktop_name)
         {
-            startup_info.lpDesktop = L"";
+            startup_info.lpDesktop = const_cast<LPWSTR>(L"");
         }
         startup_info.dwFlags = STARTF_USESHOWWINDOW;
         startup_info.wShowWindow = options.start_hidden ? SW_HIDE : SW_SHOW;
@@ -1138,4 +1138,3 @@ namespace base
 
 } //namespace base
 
-#endif 
